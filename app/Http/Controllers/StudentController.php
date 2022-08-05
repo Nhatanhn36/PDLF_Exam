@@ -18,7 +18,7 @@ class StudentController extends Controller
     public function form(){
         return view("Forms.StudentForm");
     }
-    public function create(Request $request, Student $student){
+    public function create(Request $request,Student $student){
         $request->validate([
             'id'=>'required|int|unique:student',
             'name'=>'required|string',
